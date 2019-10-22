@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@Page.Title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">
+                    <img src="~/Images/jobs_logo.png" class="logo-size" />
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="~/Home/Index">
+                            <i class="glyphicon glyphicon-home"></i>
+                            الرئسيه
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-folder-open"></i>
+                            اصناف العروض
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/Home/About">
+                            <i class="glyphicon glyphicon-info-sign"></i>
+                            حول الموقع
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/Home/Contact">
+                            <i class="glyphicon glyphicon-envelope"></i>
+                            اتصل بنا
+                        </a>
+                    </li>
+                </ul>
+
+                <!--partion view-->
+                @Html.Partial("_Login")
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            @RenderBody()
+        </div>
+    </div>
+
+
+    <!--Footer-->
+    <!--navbar-fixed-bottom -->
+    <footer class=" myfooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                        من نحن
+                    </h3>
+                    <p>
+                        السلام عليكم ورحمه الله وبركاته كيف الحال هذه الصفحه خاصه بصفحه بمعرفه دوت كوم
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <h3>
+                        <i class="glyphicon glyphicon-globe"></i>
+                        روابط هامه
+                    </h3>
+                    <p>
+                        <ul>
+                            <li><a href="#">عام</a></li>
+                            <li><a href="#">خاص</a></li>
+                            <li><a href="#">خارج البلاد</a></li>
+                        </ul>
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <h3>
+                        <i class="glyphicon glyphicon-envelope"></i>
+                        تواصل معنا
+                    </h3>
+                    <p>
+                        <ul>
+                            <li><a href="#">فيسبوك</a></li>
+                            <li><a href="#">تويتر</a></li>
+                            <li><a href="#">يوتيوب</a></li>
+                            <li><a href="#">انستغرام</a></li>
+                            <li><a href="#">ارسل لنا رساله</a></li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="subfooter">
+            <span> جميع الحقوق محفوظه لموقع معرفه 2019</span>
+        </div>
+    </footer>
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    @RenderSection("scripts",required:false)
+</body>
+</html>
