@@ -19,12 +19,12 @@
             @foreach (var subitem in item.Jobs)
             {
 
-                <div class="col-md-3 thumbnail" style="margin-bottom:30px;margin-left:20px;height:380px;">
-                    <img src="~/Uploads/@subitem.JobImage" />
-                    <h3>@Html.DisplayFor(modelItem => subitem.JobTitle)</h3>
-                    <h5>@Html.DisplayFor(modelItem => subitem.JobContent)</h5>
-                    <button class="btn btn-default">التفاصيل</button>
-                </div>
+            <div class="col-md-3 thumbnail" style="margin-bottom:30px;margin-left:20px;height:380px;">
+                <img src="~/Uploads/@subitem.JobImage" />
+                <h3>@Html.DisplayFor(modelItem => subitem.JobTitle)</h3>
+                <h5>@Html.DisplayFor(modelItem => subitem.JobContent)</h5>
+                @Html.ActionLink("تفاصيل", "Details", new { JobId = subitem.Id }, new { @class = "btn btn-primary"}) 
+            </div>
 
 
             }

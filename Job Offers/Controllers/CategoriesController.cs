@@ -10,6 +10,7 @@ using Job_Offers.Models;
 
 namespace Job_Offers.Controllers
 {
+    [Authorize(Roles ="Admins")]
     public class CategoriesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

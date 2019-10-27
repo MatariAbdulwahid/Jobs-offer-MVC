@@ -48,10 +48,11 @@ namespace Job_Offers.Models
 
     public class LoginViewModel
     {
+        //change the login with username
         [Required]
-        [Display(Name = "Email")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "UserName")]
+        
+        public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]

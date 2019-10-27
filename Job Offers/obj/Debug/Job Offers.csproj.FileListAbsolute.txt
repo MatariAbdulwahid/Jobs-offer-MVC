@@ -98,7 +98,6 @@ C:\Users\Abdul\source\repos\Job Offers\Job Offers\bin\Microsoft.Owin.Security.Tw
 C:\Users\Abdul\source\repos\Job Offers\Job Offers\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Abdul\source\repos\Job Offers\Job Offers\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Abdul\source\repos\Job Offers\Job Offers\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Abdul\source\repos\Job Offers\Job Offers\obj\Debug\Job Offers.csprojAssemblyReference.cache
 C:\Users\Abdul\source\repos\Job Offers\Job Offers\obj\Debug\Job Offers.csproj.CoreCompileInputs.cache
 C:\Users\Abdul\source\repos\Job Offers\Job Offers\obj\Debug\Job Offers.csproj.CopyComplete
 C:\Users\Abdul\source\repos\Job Offers\Job Offers\obj\Debug\Job Offers.dll
@@ -110,3 +109,5 @@ C:\Users\Abdul\source\repos\Job Offers\Job Offers\obj\Debug\Job_Offers.Migration
 C:\Users\Abdul\source\repos\Job Offers\Job Offers\obj\Debug\Job_Offers.Migrations.AddCategory1.resources
 C:\Users\Abdul\source\repos\Job Offers\Job Offers\obj\Debug\Job_Offers.Migrations.AddJobsTables.resources
 C:\Users\Abdul\source\repos\Job Offers\Job Offers\obj\Debug\Job_Offers.Migrations.addJobColum.resources
+C:\Users\Abdul\source\repos\Job Offers\Job Offers\obj\Debug\Job_Offers.Migrations.addApplayTable.resources
+C:\Users\Abdul\source\repos\Job Offers\Job Offers\obj\Debug\Job Offers.csprojAssemblyReference.cache

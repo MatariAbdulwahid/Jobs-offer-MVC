@@ -11,6 +11,7 @@ using Job_Offers.Models;
 
 namespace Job_Offers.Controllers
 {
+    [Authorize]
     public class JobsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -91,10 +92,17 @@ namespace Job_Offers.Controllers
         {
             if (ModelState.IsValid)
             {
+                string oldPath = Path.Combine(Server.MapPath("~/Uploads"), job.JobImage);
+                if (upload != null)
+                {
+                    System.IO.File.Delete(oldPath);
+                    string path = Path.Combine(Server.MapPath("~/Uploads"), upload.FileName);
+                    upload.SaveAs(path);
+                    job.JobImage = upload.FileName;  //to save it in DB
+                }
                 //to save image in server we need para upload and string path
-                string path = Path.Combine(Server.MapPath("~/Uploads"), upload.FileName);
-                upload.SaveAs(path);
-                job.JobImage = upload.FileName;  //to save it in DB
+                
+                 //to save it in DB
                 db.Entry(job).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

@@ -10,7 +10,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table" style="border : 1px solid blue">
+<table class="table table table-striped table-bordered table-hover" >
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Category.CategoryName)
@@ -40,7 +40,7 @@
         </td>
         <td>
           
-          <img src="~/Uploads/@Html.DisplayNameFor(model => model.JobImage)"
+          <img src="~/Uploads/@Html.DisplayFor(modelItem => item.JobImage)"
                      class="thumbnail" style="width:48px;height:48px;" />
              
         </td>

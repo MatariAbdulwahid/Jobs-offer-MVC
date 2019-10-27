@@ -34,5 +34,8 @@ namespace Job_Offers.Models
         public System.Data.Entity.DbSet<Job_Offers.Models.Category> Categories { get; set; }
 
         public System.Data.Entity.DbSet<Job_Offers.Models.Job> Jobs { get; set; }
+
+        public System.Data.Entity.DbSet<Job_Offers.Models.ApplayForJob> ApplayForJobs { get; set; }
+
     }
 }
