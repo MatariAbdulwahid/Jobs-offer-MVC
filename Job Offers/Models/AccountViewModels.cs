@@ -91,6 +91,34 @@ namespace Job_Offers.Models
         public string ConfirmPassword { get; set; }
     }
 
+    public class EditProfileViewModel
+    {
+        // add another attribut
+        [Required]
+        [Display(Name = "اسم المتخدم")]
+
+        public string UserName { get; set; }
+        [Required]
+        [EmailAddress]
+        [Display(Name = "الايميل")]
+        public string Email { get; set; }
+        //
+        [Required]
+        [Display(Name = "نوع المستخدم")]
+        public string UserType { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [DataType(DataType.Password)]
+        [Display(Name = "كلمه السر")]
+        public string Password { get; set; }
+
+        [DataType(DataType.Password)]
+        [Display(Name = "تاكيد كلمه السر")]
+        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        public string ConfirmPassword { get; set; }
+    }
+
     public class ResetPasswordViewModel
     {
         [Required]

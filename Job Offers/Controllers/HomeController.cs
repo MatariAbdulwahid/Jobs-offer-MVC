@@ -3,6 +3,8 @@ using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
 
@@ -76,11 +78,50 @@ namespace Job_Offers.Controllers
             return View();
         }
 
+        
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Contact(ContactModel contact)
+        {
+            var mail = new MailMessage();
+            var loginInfo = new NetworkCredential("Email", "Password"); // sender email , password
+            mail.From = new MailAddress(contact.Email);
+            mail.To.Add(new MailAddress("Email"));
+            mail.Subject = contact.Subject;
+            //mail.IsBodyHtml = true;
+
+            mail.Body = contact.Message;
+
+            var smtpClient = new SmtpClient("smtp.gmail.com",587);
+            smtpClient.EnableSsl = true;
+            smtpClient.Credentials = loginInfo;
+            smtpClient.Send(mail);
+            return RedirectToAction("Index");
+        }
+
+
+
+
+
+        public ActionResult Search()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult Search(string searchName)
+        {
+            var result = db.Jobs.Where(a => a.JobTitle.Contains(searchName)
+            ||a.JobContent.Contains(searchName)
+            || a.Category.CategoryName.Contains(searchName)
+            || a.Category.CategoryDescription.Contains(searchName)).ToList();
+
+            return View(result);
         }
     }
 }

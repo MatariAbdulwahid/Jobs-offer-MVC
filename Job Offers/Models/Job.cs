@@ -21,5 +21,7 @@ namespace Job_Offers.Models
         [Display(Name = "نوع الوظيفه")]
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
+
+        public virtual ICollection<ApplayForJob> ApplyJobs { get; set; }
     }
 }

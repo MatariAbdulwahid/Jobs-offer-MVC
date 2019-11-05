@@ -111,3 +111,4 @@ C:\Users\Abdul\source\repos\Job Offers\Job Offers\obj\Debug\Job_Offers.Migration
 C:\Users\Abdul\source\repos\Job Offers\Job Offers\obj\Debug\Job_Offers.Migrations.addJobColum.resources
 C:\Users\Abdul\source\repos\Job Offers\Job Offers\obj\Debug\Job_Offers.Migrations.addApplayTable.resources
 C:\Users\Abdul\source\repos\Job Offers\Job Offers\obj\Debug\Job Offers.csprojAssemblyReference.cache
+C:\Users\Abdul\source\repos\Job Offers\Job Offers\obj\Debug\Job_Offers.Migrations.UpdateApplayINJobs.resources
